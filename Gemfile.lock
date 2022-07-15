@@ -66,6 +66,8 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    appsignal (3.0.27)
+      rack
     benchmark-ips (2.10.0)
     builder (3.2.4)
     concurrent-ruby (1.1.10)
@@ -128,6 +130,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.6-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.6-x86_64-linux)
+      racc (~> 1.4)
     puma (5.6.4)
       nio4r (~> 2.0)
     racc (1.6.0)
@@ -183,8 +187,10 @@ GEM
 
 PLATFORMS
   x86_64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
+  appsignal (~> 3.0)
   debug
   derailed_benchmarks
   puma (~> 5.0)

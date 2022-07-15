@@ -26,3 +26,5 @@ group :development do
   gem "derailed_benchmarks"
 end
 
+
+gem "appsignal", "~> 3.0"
