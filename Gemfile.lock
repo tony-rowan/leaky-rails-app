@@ -91,6 +91,7 @@ GEM
     digest (3.1.0)
     erubi (1.10.0)
     ffi (1.15.5)
+    foreman (0.87.2)
     get_process_mem (0.2.7)
       ffi (~> 1.0)
     globalid (1.0.0)
@@ -176,6 +177,10 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     strscan (3.0.3)
+    tailwindcss-rails (2.0.10-x86_64-darwin)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.0.10-x86_64-linux)
+      railties (>= 6.0.0)
     thor (1.2.1)
     timeout (0.3.0)
     tzinfo (2.0.4)
@@ -193,9 +198,11 @@ DEPENDENCIES
   appsignal (~> 3.0)
   debug
   derailed_benchmarks
+  foreman (~> 0.87.2)
   puma (~> 5.0)
   rails (~> 7.0.3)
   sprockets-rails
+  tailwindcss-rails (~> 2.0)
   tzinfo-data
 
 RUBY VERSION

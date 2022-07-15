@@ -1,1 +1,1 @@
-$a_hash = {}
+$an_array = []
