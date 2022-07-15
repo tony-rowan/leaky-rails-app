@@ -1,7 +1,7 @@
 <h1 class="mb-4 text-2xl">Leaks!</h1>
 
 <div class="grid grid-cols-6 gap-8">
-  <% $an_array.each do |item| %>
+  <% $an_array.last(1000).each do |item| %>
     <div class="rounded bg-teal-200 border-2 border-teal-500 text-center p-4">
       <%= item %>
     </div>
