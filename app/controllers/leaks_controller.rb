@@ -1,5 +1,16 @@
 class LeaksController < ApplicationController
+  before_action :leak
+
   def index
-    1000.times { $an_array << "Hello, World! (%0.2f)" %[rand] }
+    @leaks = $leak.sample(100)
+  end
+
+
+  private
+
+  def leak
+    return unless params[:leak]
+
+    1000.times { $leak << Leak.new }
   end
 end

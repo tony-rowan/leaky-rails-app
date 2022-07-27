@@ -1,9 +1,9 @@
-<h1 class="mb-4 text-2xl">Leaks!</h1>
+<h1 class="mb-4 text-2xl">Leaks! (<%= $leak.size %>)</h1>
 
 <div class="grid grid-cols-6 gap-8">
-  <% $an_array.last(1000).each do |item| %>
+  <% @leaks.each do |leak| %>
     <div class="rounded bg-teal-200 border-2 border-teal-500 text-center p-4">
-      <%= item %>
+      <%= leak.name %>
     </div>
   <% end %>
 </div>
