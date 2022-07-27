@@ -2,7 +2,9 @@ class LeaksController < ApplicationController
   before_action :leak
 
   def index
-    @leaks = $leak.sample(100)
+    Appsignal.instrument('leak.fetch_leaks') do
+      @leaks = $leak.sample(100)
+    end
   end
 
 
@@ -11,6 +13,8 @@ class LeaksController < ApplicationController
   def leak
     return unless params[:leak]
 
-    1000.times { $leak << Leak.new }
+    Appsignal.instrument('leak.create_leaks') do
+      1000.times { $leak << Leak.new }
+    end
   end
 end
